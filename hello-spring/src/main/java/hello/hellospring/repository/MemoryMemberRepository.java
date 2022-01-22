@@ -42,5 +42,9 @@ public class MemoryMemberRepository implements MemberRepository{
 		// TODO Auto-generated method stub
 		return new ArrayList<>(store.values());
 	}
+	
+	public void clearStore() {
+		store.clear();
+	}
 
 }
