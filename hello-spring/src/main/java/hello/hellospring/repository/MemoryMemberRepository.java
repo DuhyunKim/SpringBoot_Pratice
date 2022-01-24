@@ -9,7 +9,6 @@ import java.util.Optional;
 import hello.hellospring.domain.Member;
 
 public class MemoryMemberRepository implements MemberRepository{
-	//간단한 이해용으로 만든 소스로 동시성 문제가 있으니 그냥 넘어가시면 됩니다. 
 	private static Map<Long, Member> store = new HashMap<>();
 	private static long sequence = 0L;
 	
@@ -31,7 +30,6 @@ public class MemoryMemberRepository implements MemberRepository{
 	@Override
 	public Optional<Member> findByName(String name) {
 		// TODO Auto-generated method stub
-		// 자바8 람다식 표현
 		return store.values().stream()
 				.filter(member -> member.getName().equals(name))
 				.findAny();
