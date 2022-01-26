@@ -4,6 +4,9 @@ package hello.hellospring.servcie;
 import java.util.List;
 import java.util.Optional;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
 import hello.hellospring.domain.Member;
 import hello.hellospring.repository.MemberRepository;
 import hello.hellospring.repository.MemoryMemberRepository;
@@ -12,6 +15,7 @@ public class MemberService {
 	
 	private final MemberRepository memberRepository;
 	
+	//DI 방식 중 생성자 주입
 	public MemberService(MemberRepository memberRepository) {
 		this.memberRepository = memberRepository;
 	}
