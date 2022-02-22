@@ -19,6 +19,7 @@ import static org.hamcrest.Matchers.is;
 @RunWith(SpringRunner.class)
 /*
 선언할 경우 @Controller, @ControllerAdvice 등을 사용할 수 있습니다.
+해당 어노테이션은 JPA 기능이 작동하지 않는다
 */
 @WebMvcTest(controllers = HelloController.class)
 public class HelloControllerTest {

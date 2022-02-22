@@ -9,7 +9,9 @@ import javax.persistence.*;
 //롬복의 어노테이션 @NoArgsConstructor: 기본 생성자 자동 추가
 @Getter
 @NoArgsConstructor
-//JPA의 어노테이션, 테이블과 링크될 클래스 ex)SalesManget.java -> sales_manager table
+/*JPA의 어노테이션, 테이블과 링크될 클래스 ex)SalesManget.java -> sales_manager table
+* Entity 클래스 기준으로 테이블이 생성되고 스키마가 변경되다.
+* */
 @Entity
 public class Posts {
     @Id //해당 테이블의 PK
