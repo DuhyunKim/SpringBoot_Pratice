@@ -1,5 +1,6 @@
 package com.jojoldu.book.springboot.domain.posts;
 
+import com.jojoldu.book.springboot.domain.BaseTimeEntity;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -13,7 +14,7 @@ import javax.persistence.*;
 * Entity 클래스 기준으로 테이블이 생성되고 스키마가 변경되다.
 * */
 @Entity
-public class Posts {
+public class Posts extends BaseTimeEntity {
     @Id //해당 테이블의 PK
     @GeneratedValue(strategy = GenerationType.IDENTITY) //PK의 생성규칙
     private Long id;
