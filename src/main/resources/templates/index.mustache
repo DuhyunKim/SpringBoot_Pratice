@@ -7,26 +7,27 @@
                 <a href="/posts/save" role="botton" class="btn btn-primary">글 등록</a>
             </div>
         </div>
-    </div>
-    <!--목록 출력 영역-->
-    <table class="table table-horizontal table-bordered">
-        <thead class="thead-strong">
+        <!--목록 출력 영역-->
+        <table class="table table-horizontal table-bordered">
+            <thead class="thead-strong">
             <tr>
                 <th>게시글번호</th>
                 <th>제목</th>
                 <th>작성자</th>
                 <th>최종수정일</th>
             </tr>
-        </thead>
-        <tbody id="tbody">
-        {{#posts}} <!--java의 for문으로 posts라는 List-->
+            </thead>
+            <tbody id="tbody">
+            {{#posts}} <!--java의 for문으로 posts라는 List-->
             <tr>
                 <th>{{id}}</th>
-                <th>{{title}}</th>
+                <th><a href="/posts/update/{{id}}">{{title}}</a></th>
                 <th>{{author}}</th>
-                <th>{{modifidedDate}}</th>
+                <th>{{modifiedDate}}</th>
             </tr>
-        {{/posts}}
-        </tbody>
-    </table>
+            {{/posts}}
+            </tbody>
+        </table>
+    </div>
+
 {{>layout/footer}}
