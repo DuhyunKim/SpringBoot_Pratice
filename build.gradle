@@ -35,15 +35,20 @@ dependencies {
     implementation('junit:junit:4.13.2')
 
     //Gradle 버전 6부터는 compileOnly, testCompile 사용하지 않음
+    //@Getter, @Setter 등에 사용
     implementation('org.projectlombok:lombok')
     testImplementation('org.projectlombok:lombok')
 
     annotationProcessor('org.projectlombok:lombok')
     testAnnotationProcessor('org.projectlombok:lombok')
 
-    implementation('org.springframework.boot:spring-boot-starter-data-jpa')
-    implementation('com.h2database:h2')
+    implementation('org.springframework.boot:spring-boot-starter-data-jpa') //JPA
+    implementation('com.h2database:h2') //인메모리형 관계형 데이터베이스
     //implementation('mysql:mysql-connector-java')
 
+    //클라이언트 템플릿 엔진
     implementation('org.springframework.boot:spring-boot-starter-mustache')
+    //소셜로그인 등 클라이언트 입장에서 소셜 기능 구현 시 필요한 의존성입니다.
+    implementation('org.springframework.boot:spring-boot-starter-oauth2-client')
+    //implementation('org.springframework.boot:spring-boot-starter-security')
 }
